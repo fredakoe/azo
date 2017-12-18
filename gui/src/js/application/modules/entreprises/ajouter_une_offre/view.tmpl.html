@@ -1,0 +1,81 @@
+
+<!-- ajouter_une_offre -->
+<div id="1141" role="ajouter_une_offre_entreprise">
+            <br/>
+            <div id="21d5718a-129a-4b17-bf6d-9507b37451de" class="content-wrapper tab-content">
+                <div class="tab-content">
+                    <!-- AjoutOffre -->
+                    <div id="22b4c577-8390-49d4-9e8a-a68a4ed66849"  data-bind="with: AjoutOffre">
+                            <div class="col-md-9 col-md-offset-1">
+                                <form class="form-horizontal" role="form">
+                                    <fieldset >
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Nom de l'entreprise</label>
+                                            <div class="col-md-7">
+                                                <input  id ="EntrepriseName" type="text" class="form-control" data-bind="value: EntrepriseName">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Adresse</label>
+                                            <div class="col-md-7">
+                                                <input id ="Address" type="text" class="form-control" data-bind="value: Address">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">E-mail</label>
+                                            <div class="col-md-7">
+                                                <input id ="Email" type="email" class="form-control" data-bind="value: Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Téléphone</label>
+                                            <div class="col-md-7">
+                                                <input id ="Tel" type="tel" class="form-control" data-bind="value: Telephone">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Titre de l'offre</label>
+                                            <div class="col-md-7">
+                                                <input id ="Titre" type="text" class="form-control" data-bind="value: Titre, attr: {'placeholder': TitreDefault}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Date de Fin</label>
+                                            <div class="col-md-7">
+                                                <input id ="DateFin" type="date" class="form-control" data-bind="value: DateFin, attr: {'placeholder': DateFinDefault}">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">Description de l'offre</label>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" rows="15" data-bind="value: DescriptionOffre, attr: {'placeholder': DescriptionOffreDefault}"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Site web</label>
+                                            <div class="col-md-7">
+                                                <input id ="SiteWeb" type="url" class="form-control" data-bind="value: SiteWeb">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">Description de l'entreprise</label>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" rows="10" data-bind="value: DescriptionEntreprise"></textarea>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                    </div>
+                    <!-- /AjoutOffre -->
+                    <div class=" col-md-1 col-md-offset-8" data-bind="with: root" >
+
+                        <a href="#" type="submit"  class="btn btn-primary" role="button"  data-bind="click: ajouter">Ajouter</a>
+
+                    </div>
+                </div>
+
+            </div>
+</div>
+<!-- /ajouter_une_offre -->

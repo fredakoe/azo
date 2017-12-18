@@ -1,0 +1,27 @@
+<!-- cv -->
+<div id="2111" role="cv">
+    <br/>
+    <div id="21d5718a-129a-4b17-bf6d-9507b37451de" class="content-wrapper tab-content">
+            <!-- cvsCandidat -->
+            <div id="22b4c577-8390-49d4-9e8a-a68a4ed66849"  data-bind="with: cvsCandidat">
+
+                <div class="col-md-6 col-md-offset-1">
+                    <label>CV candidat</label>
+
+                    <input  id ="cv" type="text" class="form-control" data-bind="value: CvCandidat, attr: {'placeholder': CvCandidatDefault}">
+                    <a target="cv_upload" data-bind="attr: { href: href  }">Visualiser CV existant</a>
+                    <form target="cv_upload" data-bind="attr: { method: methodType, action: referenceLink, enctype: enctype}">
+                        <input type="file" id="cvToUpload" name="cvToUpload"/>
+                        <input  type="submit" class="btn btn-primary"/>
+                    </form>
+                    <iframe name="cv_upload" style="display:none" ></iframe>
+                </div>
+
+            </div>
+            <!-- /cvsCandidat -->
+            <div class="col-md-offset-6 col-md-4" data-bind="with: root" >
+                <a href="#" type="submit"  class="btn btn-primary" role="button"  data-bind="click: save">Save</a>
+            </div>
+    </div>
+</div>
+<!-- /cv -->

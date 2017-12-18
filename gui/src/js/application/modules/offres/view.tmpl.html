@@ -1,0 +1,145 @@
+
+<!-- Offres -->
+<div id="31" role="offres" xmlns="http://www.w3.org/1999/html">
+
+    <div class="tab-content auto-height" data-bind="layered: activeLayer">
+        <!-- hub -->
+        <div id="311" class="tab-pane fade" data-bind="with: layer1">
+            <div class="body">
+                    <div class="row-fluid">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="title">
+                                <span>Liste Offres</span>
+                            </div>
+                            <!-- offres -->
+                            <div id="ListDesOffres">
+                                <div id ="TableOffres" data-bind="gridView: offresGridViewAdapter"></div>
+                            </div>
+                            <!-- /offres -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- /hub -->
+        <!-- details -->
+        <div id="312" class="tab-pane fade" data-bind="with: layer2">
+            <div data-bind="if: selected">
+                <div class="body">
+                    <div class="row-fluid">
+                        <div class="title">
+                            <span>
+                                <a href="#" data-bind="click: goBack, clickBubble: false"> Retourner à la liste des Offres</a>
+                            </span>
+                        </div>
+                        <div class="col-md-10 col-md-offset-2">
+
+                            <!-- ko if: DescriptifOfrreDisplay() -->
+
+                                <div class="col-md-10">
+                                    <div class="section">Descriptif </div>
+                                    <form>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Nom de l'entreprise : </label>
+                                                    <span data-bind="text: EntrepriseName"></span>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Offre : </label>
+                                                    <span  data-bind="text: OffreTitre"></span>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Date de Fin : </label>
+                                                    <span data-bind="text: OffreDateEnd"></span>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Status : </label>
+                                                    <span data-bind="text: OffreStatus"></span>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Description : </label>
+                                                <br/>
+                                                <span id ="DescriptionOffre" data-bind="text: DescriptionOffre"></span>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <!-- /ko -->
+                                <br/>
+                                <div class="col-md-3">
+                                    <!--ko if: ViewPostul()-->
+                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#offreDescriptionModal">Postuler</a>
+                                    <!-- /ko -->
+                                </div>
+                        </div>
+                        <div class="modal fade" id="offreDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="offreDescriptionLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+
+                                                    <div class="form-group">
+                                                        <label class="control-label">Nom : </label>
+                                                        <input  id ="CandidatLastName" type="text" data-bind="value: LastName, attr: {'placeholder': LastNameDefault}"
+                                                                class="form-control"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Prénom : </label>
+                                                        <input  id ="CandidatFirstName" type="text" data-bind="value: FirstName, attr: {'placeholder': FirstNameDefault}"
+                                                                class="form-control"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Adresse Email : </label>
+                                                        <input  id ="CandidatEmail" type="email" data-bind="value: Email, attr: {'placeholder': EmailDefault}"
+                                                                class="form-control"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Téléphone : </label>
+                                                        <input  id ="CandidatTel" type="tel" data-bind="value: Telephone, attr: {'placeholder': TelephoneDefault}"
+                                                                class="form-control"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">CV : </label>
+                                                        <!--ko if: OldCv()-->
+                                                        <a target="cv_upload" data-bind="attr: { href: href  }">Visualiser CV existant</a>
+                                                        <!--/ko-->
+                                                        <form target="hidden_upload" data-bind="attr: { method: methodType, action: referenceLink, enctype: enctype}">
+                                                            <input type="file" id="cvToUpload" name="cvToUpload"/>
+                                                            <input type="submit" class="btn btn-primary"/>
+                                                        </form>
+                                                        <iframe  name="hidden_upload" style="display:none" ></iframe>
+                                                    </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    <button type="button" class="btn btn-default" data-bind="click: sendFile">Envoyer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- /details -->
+    </div>
+
+</div>
+<!-- /Offres-->
+

@@ -1,0 +1,71 @@
+
+<!-- authentication view -->
+<div id="239a3167-d88f-43fb-943b-596b6a028270" role="authentication-view">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="col-md-9 col-md-offset-2">
+                <div class="header">
+                    <h2> Azo Web Application </h2>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content auto-height" data-bind="layered: activeLayer">
+            <!-- hub -->
+            <div id="14adcf1e-8dff-4d65-8dd0-74bdfc35bac5" class="tab-pane fade" data-bind="with: layer1">
+                <div class="row-fluid" >
+                    <div class="col-md-10">
+                        <div class="alert alert-error" data-bind="visible: error().length > 0">
+                            <strong data-bind="text: error"></strong>
+                        </div>
+
+                        <div class="banner">
+                            <div class="inner">
+                                <form data-bind="submit: signin" class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label">E-mail or Username</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-bind="value: email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label">Password</label>
+                                            <div class="col-md-6">
+                                                <input type="password" data-bind="value: password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-6">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> Remember me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-6">
+                                                <button type="submit" class="btn btn-primary" data-bind="enable: canSignIn">
+                                                    Sign in
+                                                </button>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /hub -->
+        </div>
+        <div class="row-fluid">
+            <div class="col-md-10 col-md-offset-2">
+                <div class="footer">
+                    <span data-bind="text: 'v' + version.version + '.' + version.build + ' (' + version.date + ')'"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /authentication view -->

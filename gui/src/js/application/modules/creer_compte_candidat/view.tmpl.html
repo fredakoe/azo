@@ -1,0 +1,67 @@
+
+<!-- inscription_candidat -->
+<div id="123456781" role="inscription_candidat">
+            <br/>
+            <div id="21d5718a-129a-4b17-bf6d-9507b37451de" class="content-wrapper tab-content">
+                <div class="col-md-offset-1">
+                    <div class="tab-content">
+                        <!-- CandidatProfil -->
+                        <div id="22b4c577-8390-49d4-9e8a-a68a4ed66849"  data-bind="with: CandidatProfil">
+                                <div class="col-md-10">
+                                    <form class="form-horizontal" role="form">
+                                        <fieldset data-bind="with: CandidatProfil">
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Prenom</label>
+                                                <div class="col-md-7">
+                                                    <input  id ="FirstName" type="text" class="form-control" data-bind="value: FirstName, attr: {'placeholder': FirstNameDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Nom</label>
+                                                <div class="col-md-7">
+                                                    <input id ="LastName"   type="text" class="form-control" data-bind="value: LastName, attr: {'placeholder': LastNameDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Adresse</label>
+                                                <div class="col-md-7">
+                                                    <input id ="Address" type="text" class="form-control" data-bind="value: Address, attr: {'placeholder': AddressDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">E-mail</label>
+                                                <div class="col-md-7">
+                                                    <input id ="Email" type="email" class="form-control" data-bind="value: Email, attr: {'placeholder': EmailDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Téléphone</label>
+                                                <div class="col-md-7">
+                                                    <input id ="Tel" type="tel" class="form-control" data-bind="value: Telephone, attr: {'placeholder': TelephoneDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Login</label>
+                                                <div class="col-md-7">
+                                                    <input id ="Login" type="text" class="form-control" data-bind="value: Login, attr: {'placeholder': LoginDefault}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Password</label>
+                                                <div class="col-md-7">
+                                                    <input id ="Password" type="text" class="form-control" data-bind="value: Password, attr: {'placeholder': PasswordDefault}">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                        </div>
+                        <!-- /CandidatProfil -->
+                        <div class=" col-md-1 col-md-offset-7" data-bind="with: root" >
+                            <a href="#" type="submit"  class="btn btn-primary" role="button"  data-bind="click: save">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<!-- /inscription_candidat -->

@@ -1,0 +1,73 @@
+
+<!-- offres_entreprises -->
+<div id="1131" role="offres_entreprises">
+            <div class="busy-indicator">
+               <div class="busy-container">
+                    <div class="loading-image"></div>
+                </div>
+            </div>
+            <br>
+            <div id="11311" class="content-wrapper tab-content">
+                <div  data-bind="with: root" ></div>
+                <!-- offresEntreprises -->
+                <div id="11312" data-bind="with: offres">
+                    <div id ="TableOffresEntreprises" data-bind="gridView: offresEntreprisesGridViewAdapter"></div>
+                </div>
+                <!-- /offresEntreprises -->
+
+                <div  data-bind="with: root" >
+                    <div class="modal fade" id="DescriptionModal" tabindex="-1" role="dialog" aria-labelledby="offreDescriptionLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="section">Descriptif </div>
+                                    <form>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Nom de l'entreprise : </label>
+                                                <span data-bind="text: EntrepriseName"></span>
+                                                <input id ="NomEntreprise" type="text" class="form-control" data-bind="value: EntrepriseName">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Offre : </label>
+                                                <input id ="Offre" type="text" class="form-control" data-bind="value: OffreTitre">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Date de Fin : </label>
+                                                <input id ="Fin" type="date" class="form-control" data-bind="value: OffreDateEnd">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Status : </label>
+                                                <input id ="Status" type="text" class="form-control" data-bind="value: OffreStatus">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">Description : </label>
+                                                <div class="controls">
+                                                    <textarea id ="DescriptionOffre" class="form-control"  data-bind="value: DescriptionOffre" rows="10"/>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            <div class="modal-footer">
+                                <a href="#" type="submit"  class="btn btn-primary" role="button"  data-bind="click: save">Enregistrer</a>
+                                <a href="#" type="submit"  class="btn btn-primary" role="button" data-bind="click: cancelOff">Désactiver</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<!-- /offres_entreprises -->
