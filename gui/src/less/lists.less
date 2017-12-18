@@ -1,0 +1,124 @@
+// Lists
+
+// Common
+.boxed-list {
+  & > li {
+    float: left;
+    padding: @baseLineHeight / 2 @baseLineHeight;
+    margin: 0 4px 4px 0;
+    display: inline-block;
+    border: 1px solid #DDD;
+    background-color: #F5F5F5;
+    color: @gray;
+    width: 160px;
+    height: 80px;
+    vertical-align: top;
+    cursor: pointer;
+
+    &.big { // 80 * 2 + 2 (border top, bottom) + 4 (margin bottom) + 9 * 2 (padding top, bottom)
+      height: 184px;
+    }
+
+    &:hover {
+      color: @grayDark;
+      background-color: darken(#F5F5F5, 5%);
+    }
+
+    & > div {
+      word-wrap: break-word;
+      white-space: pre;
+    }
+  }
+}
+
+ul[class*="boxed-list"] {
+  margin: 0;
+
+  & > li {
+    list-style: none;
+  }
+
+  .sub {
+    font-size: 90%;
+    color: @grayLight;
+  }
+}
+
+ul.boxed-list-container {
+  & > li {
+    padding: @baseLineHeight * 1.5 0 @baseLineHeight 0;
+    clear: both;
+    font-size: 15px;
+  }
+}
+
+ul.boxed-list {
+  .boxed-list;
+}
+
+ul.boxed-list-selector {
+  .boxed-list;
+
+  & > li {
+    width: 280px;
+    height: 18px;
+  }
+}
+
+ul.boxed-list-options {
+  & > li {
+    position: relative;
+    padding: @baseLineHeight / 2 @baseLineHeight;
+    margin: 0 0 4px 0;
+    display: inline-block;
+    border: 1px solid #DDD;
+    background-color: #F5F5F5;
+    color: @gray;
+    width: 100px;
+    height: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 0; // Removes the annoying borders
+
+    &:hover {
+      background-color: darken(#F5F5F5, 5%);
+      color: @grayDark;
+    }
+
+    &.default {
+      background-color: @btnSuccessBackground;
+      color: @white;
+
+      &:hover {
+        background-color: @btnSuccessBackgroundHighlight;
+      }
+    }
+
+    &.danger {
+      background-color: @btnDangerBackground;
+      color: @black;
+
+      &:hover {
+        background-color: @btnDangerBackgroundHighlight;
+      }
+    }
+
+    &.disabled {
+      background-color: @veryLightGray;
+      color: @grayLight;
+      cursor: default;
+
+      &:hover {
+        background-color: @veryLightGray;
+        color: @grayLight;
+      }
+    }
+
+    & > span {
+      font-size: @baseFontSize;
+      position: absolute;
+      bottom: @baseLineHeight / 2;
+    }
+  }
+
+}

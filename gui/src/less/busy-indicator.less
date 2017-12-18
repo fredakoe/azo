@@ -1,0 +1,27 @@
+// Busy Indicatpr
+//
+
+.busy-indicator {
+  .mask-backdrop {
+    z-index: 1999;
+  }
+
+  .busy-container {
+    background: url('/assets/img/loading-16x16.gif') no-repeat;
+    background-position: center;
+    position: absolute;
+    padding: 0;
+    left: 50%;
+    margin-left: -24px;
+    top: 50%;
+    margin-top: -24px;
+
+    .loading-image {
+      background-image: url('/assets/img/loading-48x48.gif');
+      position: relative;
+      width: 48px;
+      height: 48px;
+      margin: auto;
+    }
+  }
+}

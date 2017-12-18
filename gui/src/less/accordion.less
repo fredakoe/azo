@@ -1,0 +1,57 @@
+// Accordion
+//
+
+.accordion {
+  a:hover {
+    text-decoration: none;
+  }
+
+  .accordion-heading {
+    background-color: @veryLightGray;
+  }
+
+  .accordion-inner {
+    padding: @baseLineHeight / 2;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .accordion-subheading {
+    font-size: 11px;
+    color: @grayLight;
+  }
+
+  .accordion-summary {
+    padding: 4px 0;
+    font-size: 11px;
+    color: @grayLight;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.box-header {
+  font-size: 29px;
+  font-weight: 700;
+  color: #959595;
+
+  &:hover {
+    span.title {
+      color: @linkColorHover;
+    }
+  }
+
+  span.title {
+    font-size: 11px;
+    color: @linkColor;
+    display: block;
+    padding-bottom: @baseLineHeight / 2;
+  }
+
+  span.value[class*="red"] {
+    color: @cooperRed;
+  }
+}

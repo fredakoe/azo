@@ -1,0 +1,49 @@
+// Panes
+
+.light-pane {
+  position: relative;
+  padding: 9px 4px;
+  margin: 1px 0 0; // override default ul
+  list-style: none;
+  background-color: @veryLightGray;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+
+  &:before, &:after {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+    left: 10px;
+  }
+
+  &:after {
+    border-bottom-color: @veryLightGray;
+    left: 12px;
+    top: -20px;
+  }
+
+  &:before {
+    border-width: 12px;
+    border-bottom-color: #ddd;
+    top: -24px;
+  }
+}
+
+.pane {
+  .light-pane;
+
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  .border-radius(4px);
+
+  &:before {
+    border-width: 12px;
+    border-bottom-color: #ccc;
+    top: -24px;
+  }
+}

@@ -1,0 +1,36 @@
+// BUTTON STYLES
+// -------------
+
+.btn-flat {
+  display: inline-block;
+  //.ie7-inline-block();
+  padding: 8px 12px;
+  //font-size: @baseFontSize;
+ // line-height: @baseLineHeight;
+  *line-height: 20px;
+ // color: @grayDark;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .75);
+  vertical-align: middle;
+  cursor: pointer;
+ // background-color: @veryLightGray;
+ // border: 1px solid @tableBorder;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  .border-radius(4px);
+  //.ie7-restore-left-whitespace(); // Give IE7 some love
+
+  &:hover {
+    text-decoration: none;
+ //   background-color: @grayLighter;
+  }
+}
+
+.danger {
+  //background-color: @red;
+  //color: @grayLighter;
+
+  &:hover {
+   // background-color: darken(@red, 5%);
+   // color: @white;
+  }
+}

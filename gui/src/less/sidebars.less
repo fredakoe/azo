@@ -1,0 +1,39 @@
+// Sidebars
+//
+
+.sidebar {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 270px;
+  margin: 0;
+  padding: 0 0 0 10px;
+  .transition(left 0.4s ease-in-out);
+  .box-sizing(border-box);
+  border: 1px solid #e5e5e5;
+  border-left: 0;
+  .border-radius(0 4px 4px 0);
+
+  .sidebar-toggle {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    text-indent: -9999px;
+    background: url(/assets/img/min.png) no-repeat 6px 50%;
+    opacity: .3;
+    background-color: @grayLighter;
+
+    &:hover {
+      background-color: darken(@grayLighter, 15%);
+      opacity: .6;
+    }
+  }
+
+  .accordion {
+    width: 230px;
+    margin: 4px 0;
+  }
+}

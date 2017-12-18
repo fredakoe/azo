@@ -1,0 +1,44 @@
+// Scaffolding
+//
+
+body {
+  .unselectable;
+  .font-segoe-ui;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+body::-webkit-scrollbar {
+  margin-right: 5px;
+  background-color: #ddd;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  -webit-box-shadow: 0 0 2px #ccc;
+  box-shadow: 0 0 2px #ccc;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 1px #eee solid;
+  border-radius: 4px;
+  background: #777;
+  -webit-box-shadow: 0 0 8px #555 inset;
+  box-shadow: 0 0 8px #555 inset;
+  -webit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+body::-webkit-scrollbar-thumb:window-inactive {
+  background: #bbb;
+  box-shadow: 0 0 8px #999 inset;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.row {
+  height: inherit;
+}

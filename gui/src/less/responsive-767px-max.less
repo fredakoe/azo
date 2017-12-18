@@ -1,0 +1,110 @@
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  .masthead {
+    .masthead-inner {
+      padding-top: 2px;
+      .transition(padding linear .2s);
+    }
+
+    .logo-cyme {
+      margin-right: 4px;
+      .transition(margin linear .2s);
+    }
+  }
+
+  .container-fluid {
+    padding-left: 2px;
+    padding-right: 2px;
+    .transition(padding linear .2s);
+  }
+
+  .nav {
+    margin-bottom: 2px;
+    .transition(margin linear .2s);
+  }
+
+  .content {
+    margin-top: 46px;
+    .transition(margin linear .2s);
+  }
+
+  .spacer-top,
+  .spacer-top-double {
+    margin-top: 0px;
+    .transition(margin linear .2s);
+  }
+
+  div[role="multi-viewer"] {
+    ul.nav {
+      left: 2px;
+      .transition(left linear .2s);
+    }
+  }
+
+  div[role="authentication-view"] {
+    .header,
+    .footer,
+    .banner .inner {
+      margin-left: 0;
+      .transition(margin linear .2s);
+    }
+  }
+
+}
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 767px) {
+
+// Patch to remove padding added by bootstrap
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    .transition(padding linear .2s);
+  }
+
+  .navbar-fixed-top {
+    margin-left: 0;
+    margin-right: 0;
+    .transition(margin linear .2s);
+  }
+
+  .row > [class*="offset"],
+  .row-fluid > [class*="offset"] {
+    margin-left: 0;
+    .transition(margin linear .2s);
+  }
+
+  .accordion .box-header {
+    font-weight: normal;
+
+    span.title {
+      font-size: @baseFontSize;
+      color: @linkColor;
+      display: block;
+      text-decoration: none;
+      padding-bottom: 0;
+
+      &:hover {
+        color: @linkColorHover;
+      }
+    }
+  }
+
+  div[role*="view"] {
+    .input-large,
+    .input-xlarge,
+    .input-xxlarge,
+    input[class*="span"],
+    select[class*="span"],
+    textarea[class*="span"],
+    .uneditable-input {
+      display: inline;
+    }
+  }
+
+}
