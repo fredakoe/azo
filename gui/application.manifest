@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+# rev 3
+
+CACHE:
+#/azo14/gui/src/img/banner.jpg
+/azo14/gui/src/img/azo-loader.png
+/azo14/gui/src/img/logo-azo.png
+/azo14/gui/src/fonts/segoe-ui-webfont.woff
+/azo14/gui/src/fonts/helveticaneue-light-webfont.woff
+/azo14/gui/src/fonts/segoe-ui-light-webfont.woff
+/azo14/gui/src/img/loading-16x16.gif
+/azo14/gui/src/img/loading-48x48.gif
+
+NETWORK:
+*
